@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+<div class="container">
+  <div class="row" style="display:flex; flex-wrap: wrap;">
+    <div class="col-lg-12">
+      <h3>Votes of cutest cats in Atelier!</h3>
+      <!-- foreach loop for the cat images -->
+      <% data["images"].forEach(function(catsImg){ %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <img style="height:200px; width:220px;" src=" <%= catsImg.url %> " alt="">
+          <div class="caption">
+            <h4> <strong>Id-no:</strong>
+              <span>
+                <%= catsImg.id %>
+              </span>
+            </h4>
+            <div>
+              <p>points: <span class="badge">
+                  <%= added %></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
