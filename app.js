@@ -60,6 +60,5 @@ app.get('*', function(req, res) {
 	res.redirect('/vote');
 });
 
-app.listen(3000, function() {
-	console.log('3000 cat server is running');
 });
+
